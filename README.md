@@ -4,7 +4,7 @@ FSG14/1-10V, FSG71/1-10V, FSUD-230V) the dimmer implements an EEP similar to A5-
 It is intended for use with [node-enocean](https://github.com/Holger-Will/node-enocean) 
 ## installation
 `npm install node-enocean-dimmer`
-## using
+## usage
 
 ```
 var enocean      = require("node-enocean")
