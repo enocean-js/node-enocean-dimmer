@@ -9,7 +9,7 @@ module.exports        = function ( app , id ) {
 		if(val<0) val=0
 		var value = app.pad(parseInt(val).toString(16),2)
 		if(val<10){
-			await(this.off)
+			await(this.off())
 			return
 		}
 		var b1    = "a502" + value + this.speed + "09" + this.address + "3001ffffffffff00"
