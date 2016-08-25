@@ -28,7 +28,9 @@
   },
   "homepage": "https://github.com/Holger-Will/node-enocean-dimmer#readme",
   "dependencies": {
-    "asyncawait": "^1.0.6",
+    "asyncawait": "^1.0.6"
+  },
+  "devDependencies": {
     "node-enocean": "^1.7.0"
   }
 }
