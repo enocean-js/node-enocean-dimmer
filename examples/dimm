@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var enocean      = require( "node-enocean" )( ) // require node-enocean
+var Dimmer       = require( "../" )
+enocean.listen( "/dev/ttyUSB0" ) // open the serialport
+
+enocean.on( "ready" , function( ) {
+	var dimmer = new Dimmer( enocean , process.argv[ 2 ]  )
+	dimmer.speed = "01" // dimm very fast
+	switch( process.argv[ 3 ] ) {
+	case "teach" :
+		dimmer.teach( ).then(enocean.close) //
+	break
+	case "off":
+		dimmer.off( ).then(enocean.close)
+	break
+	default:
+		dimmer.setValue( process.argv[ 3 ]).then(enocean.close)
+	break;
+	}
+})
